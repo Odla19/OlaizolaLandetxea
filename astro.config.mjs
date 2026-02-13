@@ -8,9 +8,7 @@ export default defineConfig({
   site: 'https://www.olaizolaetxea.com',
   integrations: [
     react(),
-    tailwind({
-      applyBaseStyles: false
-    })
+    tailwind()
   ],
   image: {
     service: {
