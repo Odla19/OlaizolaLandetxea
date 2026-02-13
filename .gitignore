@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+.astro/
+dist/
+
+# Imágenes originales (opcional, pero recomendado para no saturar el repo)
+public/images/raw/
+
+# Archivos de sistema y logs
+.DS_Store
+npm-debug.log*
+
+# Entorno y seguridad
+.env
+.env.*
