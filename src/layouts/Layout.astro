@@ -1,5 +1,11 @@
 ---
-import '../styles/global.css';
+// import '../styles/global.css';
+// Emergency Style Injection
+// <style is:global>
+//   @tailwind base;
+//   @tailwind components;
+//   @tailwind utilities;
+// </style>
 
 interface Props {
   title: string;
@@ -19,6 +25,13 @@ const { title, description = 'Olaizola Landetxea - Casa Rural' } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
     
+    <!-- Emergency Tailwind Injection -->
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    </style>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
