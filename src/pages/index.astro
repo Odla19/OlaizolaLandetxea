@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-secondary/80 backdrop-blur-md border-b border-primary/5">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex justify-between items-center">
-      <a href="/" class="font-serif text-2xl tracking-widest text-primary uppercase">Olaizola</a>
+      <a href={import.meta.env.BASE_URL} class="font-serif text-2xl tracking-widest text-primary uppercase">Olaizola</a>
       <div class="hidden md:flex items-center gap-12">
         <a href="#casa" class="text-xs font-sans tracking-[0.2em] uppercase text-primary/80 hover:text-primary transition-colors duration-300">La Casa</a>
         <a href="#galeria" class="text-xs font-sans tracking-[0.2em] uppercase text-primary/80 hover:text-primary transition-colors duration-300">Galería</a>
@@ -21,8 +21,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="relative w-full h-full">
         <!-- Fallback Image (Bottom Layer) -->
         <img
-          src="/images/Hero-xl.webp"
-          srcset="/images/Hero-sm.webp 640w, /images/Hero-xl.webp 1920w" 
+          src={import.meta.env.BASE_URL + "images/Hero-xl.webp"}
+          srcset={`${import.meta.env.BASE_URL}images/Hero-sm.webp 640w, ${import.meta.env.BASE_URL}images/Hero-xl.webp 1920w`} 
           alt="Olaizola Landetxea Hero"
           class="absolute inset-0 w-full h-full object-cover z-0"
         />
@@ -34,9 +34,9 @@ import Layout from '../layouts/Layout.astro';
           muted 
           loop 
           playsinline
-          poster="/images/Hero-xl.webp"
+          poster={import.meta.env.BASE_URL + "images/Hero-xl.webp"}
         >
-          <source src="/hero.mp4" type="video/mp4">
+          <source src={import.meta.env.BASE_URL + "images/hero.mp4"} type="video/mp4">
         </video>
       </div>
     </div>
@@ -80,8 +80,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="order-1 lg:order-2 relative group">
           <div class="overflow-hidden">
             <img 
-              src="/images/Fachada-lg.webp" 
-              srcset="/images/Fachada-sm.webp 640w, /images/Fachada-lg.webp 1024w"
+              src={import.meta.env.BASE_URL + "images/Fachada-lg.webp"} 
+              srcset={`${import.meta.env.BASE_URL}images/Fachada-sm.webp 640w, ${import.meta.env.BASE_URL}images/Fachada-lg.webp 1024w`}
               alt="Fachada Olaizola Landetxea"
               class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105"
               loading="lazy"
@@ -107,8 +107,8 @@ import Layout from '../layouts/Layout.astro';
         <!-- Main Large Image -->
         <div class="md:col-span-8 md:h-full relative overflow-hidden group">
           <img 
-            src="/images/habitacion1-md.webp" 
-            srcset="/images/habitacion1-sm.webp 640w, /images/habitacion1-xl.webp 1200w"
+            src={import.meta.env.BASE_URL + "images/habitacion1-md.webp"} 
+            srcset={`${import.meta.env.BASE_URL}images/habitacion1-sm.webp 640w, ${import.meta.env.BASE_URL}images/habitacion1-xl.webp 1200w`}
             alt="Interior Suite"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
@@ -121,8 +121,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="md:col-span-4 flex flex-col gap-6 h-full">
           <div class="flex-1 relative overflow-hidden group">
             <img 
-              src="/images/habitacion2-md.webp" 
-              srcset="/images/habitacion2-sm.webp 640w, /images/habitacion2-lg.webp 800w"
+              src={import.meta.env.BASE_URL + "images/habitacion2-md.webp"} 
+              srcset={`${import.meta.env.BASE_URL}images/habitacion2-sm.webp 640w, ${import.meta.env.BASE_URL}images/habitacion2-lg.webp 800w`}
               alt="Habitación Detalle"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -132,8 +132,8 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="flex-1 relative overflow-hidden group">
             <img 
-              src="/images/stairs-md.webp" 
-              srcset="/images/stairs-sm.webp 640w, /images/stairs-lg.webp 800w"
+              src={import.meta.env.BASE_URL + "images/stairs-md.webp"} 
+              srcset={`${import.meta.env.BASE_URL}images/stairs-sm.webp 640w, ${import.meta.env.BASE_URL}images/stairs-lg.webp 800w`}
               alt="Detalle Arquitectónico"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -150,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-primary">
     <div class="absolute inset-0">
       <img 
-        src="/images/stairs-lg.webp" 
+        src={import.meta.env.BASE_URL + "images/stairs-lg.webp"} 
         alt="Art Hotel Detail"
         class="w-full h-full object-cover opacity-60"
         loading="lazy"

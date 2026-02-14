@@ -5,10 +5,10 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   // The full URL where your site will be hosted
-  site: 'https://odla19.github.io',
+  site: 'https://www.olaizolaetxea.com',
 
   // The repository name with leading/trailing slashes
-  base: '/OlaizolaLandetxea',
+  base: '/',
 
   integrations: [react(), tailwind()],
 
